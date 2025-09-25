@@ -1,4 +1,5 @@
 import Container from "@/components/site/Container";
+import { ArrowLeft, ArrowRight, Instagram, MessageCircle } from "lucide-react";
 
 function openInstagram() {
   const handle = document.body.getAttribute("data-ig-handle");
@@ -17,33 +18,72 @@ export default function Index() {
   return (
     <main id="top">
       {/* Hero */}
-      <section className="pt-14 md:pt-20" id="about">
-        <Container className="text-center">
-          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl leading-[1.05] tracking-tight">
-            BUILDING SPACES,
-            <br className="hidden sm:block" />
-            SHAPING STORIES
-          </h1>
-        </Container>
+      <section className="relative pt-14 md:pt-20" id="about">
+        <Container className="grid lg:grid-cols-12 gap-10 items-center">
+          {/* Left copy */}
+          <div className="lg:col-span-6 relative">
+            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[1.05] tracking-tight text-left">
+              Let’s Make
+              <br />
+              Your <span className="underline underline-offset-4 decoration-2 decoration-primary">Interior</span>
+              <br />
+              Better.
+            </h1>
+            <p className="mt-6 max-w-md text-foreground/70">
+              Boutique interior design studio creating light-filled, grounded spaces with purpose and quiet luxury.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <a href="#portfolio" className="inline-flex items-center rounded-full px-5 py-3 bg-primary text-primary-foreground">
+                Our Projects
+              </a>
+              <a href="#journal" className="inline-flex items-center rounded-full px-5 py-3 border border-foreground/30 hover:border-foreground">
+                Stories
+              </a>
+            </div>
 
-        {/* Gallery Row */}
-        <Container className="mt-12 md:mt-16" id="portfolio">
-          <div className="grid grid-cols-3 gap-4 md:gap-6">
-            <img
-              src="https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=1400&auto=format&fit=crop"
-              alt="Warm wooden seating area"
-              className="h-40 sm:h-56 md:h-80 w-full object-cover rounded"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop"
-              alt="Soft lounge with natural light"
-              className="h-40 sm:h-56 md:h-80 w-full object-cover rounded"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1200&auto=format&fit=crop"
-              alt="Minimal coffee table with art"
-              className="h-40 sm:h-56 md:h-80 w-full object-cover rounded"
-            />
+            {/* Decorative figures */}
+            <svg className="absolute -left-8 -top-8 size-14 text-foreground/30 animate-[spin_18s_linear_infinite]" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="48" stroke="currentColor" strokeDasharray="3 8" strokeWidth="2" />
+            </svg>
+            <svg className="absolute -left-10 top-36 w-14 h-6 text-foreground/30 animate-[wiggle_5s_ease-in-out_infinite]" viewBox="0 0 100 20" fill="none">
+              <path d="M0 10 C 10 0, 20 20, 30 10 S 50 0, 60 10 80 20, 100 10" stroke="currentColor" strokeWidth="2" />
+            </svg>
+          </div>
+
+          {/* Right image with arch */}
+          <div className="lg:col-span-6 relative">
+            <div className="relative mx-auto w-full max-w-md">
+              <div className="rounded-t-[140px] overflow-hidden border border-foreground/15 shadow-sm bg-secondary">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F44a562d02e7043d4a3b5ab1be1b88880%2F4a35b0382a2a40dfad791e8d726f76b3?format=webp&width=800"
+                  alt="Studio portrait in arch"
+                  className="w-full h-[420px] object-cover"
+                />
+              </div>
+              <div className="pointer-events-none absolute inset-0 rounded-t-[140px] border-2 border-foreground/10" />
+              <div className="absolute -right-24 top-6 w-24 h-24 rounded-full overflow-hidden shadow-md hidden md:block animate-[float_9s_ease-in-out_infinite]">
+                <img
+                  src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=600&auto=format&fit=crop"
+                  alt="Detail"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Image controls */}
+              <div className="mt-3 flex items-center justify-center gap-6 text-foreground/60">
+                <button aria-label="Previous" className="hover:text-foreground"><ArrowLeft className="size-4" /></button>
+                <button aria-label="Next" className="hover:text-foreground"><ArrowRight className="size-4" /></button>
+              </div>
+            </div>
+
+            {/* Social icons */}
+            <div className="mt-6 flex items-center gap-4 justify-center md:justify-start">
+              <button onClick={openInstagram} aria-label="Instagram" className="p-2 rounded-full border border-foreground/30 hover:border-foreground">
+                <Instagram className="size-4" />
+              </button>
+              <button onClick={openWhatsApp} aria-label="WhatsApp" className="p-2 rounded-full border border-foreground/30 hover:border-foreground">
+                <MessageCircle className="size-4" />
+              </button>
+            </div>
           </div>
         </Container>
       </section>
@@ -88,6 +128,7 @@ export default function Index() {
             research-driven design, material sensitivity, and meticulous
             execution.
           </p>
+          <div className="pointer-events-none absolute left-6 top-6 w-24 h-24 rounded-full border border-foreground/20 animate-[spin_30s_linear_infinite] hidden md:block" />
         </Container>
       </section>
 
