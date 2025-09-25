@@ -2,14 +2,20 @@ import Container from "./Container";
 
 function openInstagram() {
   const handle = document.body.getAttribute("data-ig-handle");
-  const url = handle ? `https://instagram.com/${handle}` : "https://instagram.com";
+  const url = handle
+    ? `https://instagram.com/${handle}`
+    : "https://instagram.com";
   window.open(url, "_blank", "noopener,noreferrer");
 }
 
 function openWhatsApp() {
   const phone = document.body.getAttribute("data-wa-phone");
-  const msg = encodeURIComponent("Hello, I'm interested in your interior design services.");
-  const url = phone ? `https://wa.me/${phone}?text=${msg}` : `https://wa.me/?text=${msg}`;
+  const msg = encodeURIComponent(
+    "Hello, I'm interested in your interior design services.",
+  );
+  const url = phone
+    ? `https://wa.me/${phone}?text=${msg}`
+    : `https://wa.me/?text=${msg}`;
   window.open(url, "_blank", "noopener,noreferrer");
 }
 
@@ -40,25 +46,55 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">Menu</div>
+          <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">
+            Menu
+          </div>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a className="hover:underline" href="#about-us">About Us</a></li>
-            <li><a className="hover:underline" href="#offerings">Our Offerings</a></li>
-            <li><a className="hover:underline" href="#builds">Proudly Builds</a></li>
-            <li><a className="hover:underline" href="#contact">Contact</a></li>
+            <li>
+              <a className="hover:underline" href="#about-us">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a className="hover:underline" href="#offerings">
+                Our Offerings
+              </a>
+            </li>
+            <li>
+              <a className="hover:underline" href="#builds">
+                Proudly Builds
+              </a>
+            </li>
+            <li>
+              <a className="hover:underline" href="#contact">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
         <div>
-          <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">Follow us</div>
+          <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">
+            Follow us
+          </div>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><button onClick={openInstagram} className="hover:underline">Instagram</button></li>
-            <li><button onClick={openWhatsApp} className="hover:underline">WhatsApp</button></li>
+            <li>
+              <button onClick={openInstagram} className="hover:underline">
+                Instagram
+              </button>
+            </li>
+            <li>
+              <button onClick={openWhatsApp} className="hover:underline">
+                WhatsApp
+              </button>
+            </li>
           </ul>
         </div>
 
         <div>
-          <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">Contact</div>
+          <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">
+            Contact
+          </div>
           <ul className="mt-4 space-y-2 text-sm">
             <li>hello@solhaus.studio</li>
             <li>+91 992 346 6795</li>

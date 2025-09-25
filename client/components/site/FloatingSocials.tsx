@@ -2,14 +2,20 @@ import { Instagram, MessageCircle } from "lucide-react";
 
 function openInstagram() {
   const handle = document.body.getAttribute("data-ig-handle");
-  const url = handle ? `https://instagram.com/${handle}` : "https://instagram.com";
+  const url = handle
+    ? `https://instagram.com/${handle}`
+    : "https://instagram.com";
   window.open(url, "_blank", "noopener,noreferrer");
 }
 
 function openWhatsApp() {
   const phone = document.body.getAttribute("data-wa-phone");
-  const msg = encodeURIComponent("Hello, I'm interested in your interior design services.");
-  const url = phone ? `https://wa.me/${phone}?text=${msg}` : `https://wa.me/?text=${msg}`;
+  const msg = encodeURIComponent(
+    "Hello, I'm interested in your interior design services.",
+  );
+  const url = phone
+    ? `https://wa.me/${phone}?text=${msg}`
+    : `https://wa.me/?text=${msg}`;
   window.open(url, "_blank", "noopener,noreferrer");
 }
 
