@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Header from "./components/site/Header";
 import Footer from "./components/site/Footer";
+import FloatingSocials from "./components/site/FloatingSocials";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
+        <FloatingSocials />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

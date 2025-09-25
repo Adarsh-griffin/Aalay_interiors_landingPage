@@ -118,25 +118,64 @@ export default function Index() {
         </Container>
       </section>
 
-      {/* Vision */}
-      <section className="py-20 md:py-28" id="services">
+      {/* About Us */}
+      <section className="py-20 md:py-28" id="about-us">
         <Container className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">Vision</div>
+            <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">About us</div>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl leading-tight mt-3">
-              TIMELESS
-              <br />
-              BY DESIGN
+              Timeless by design
             </h2>
           </div>
           <p className="text-foreground/70 leading-relaxed text-base md:text-lg">
-            We believe spaces should do more than function — they should
-            resonate. Each project is a quiet dialogue between light, material,
-            and form, crafted with clarity and emotional depth. Rooted in warm
-            minimalism and quiet luxury, our approach is about creating interiors
-            that feel grounded and luminous — spaces that breathe with life, not
-            trends.
+            We believe spaces should do more than function — they should resonate. Each project is a quiet dialogue
+            between light, material, and form, crafted with clarity and emotional depth. Rooted in warm minimalism and
+            quiet luxury, our approach is about creating interiors that feel grounded and luminous.
           </p>
+        </Container>
+      </section>
+
+      {/* Our Offerings */}
+      <section className="py-16 md:py-20 border-y border-border" id="offerings">
+        <Container className="text-center">
+          <h3 className="font-display text-3xl md:text-5xl">Our Offerings</h3>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 text-left">
+            <div className="rounded-lg border border-border p-6 bg-card/50">
+              <div className="uppercase text-[11px] tracking-[0.2em] text-foreground/60">Full-service</div>
+              <div className="mt-2 font-display text-2xl">Interior Design</div>
+              <p className="mt-3 text-sm text-foreground/70">Concept to completion, including layouts, FF&E, and styling.</p>
+            </div>
+            <div className="rounded-lg border border-border p-6 bg-card/50">
+              <div className="uppercase text-[11px] tracking-[0.2em] text-foreground/60">Consulting</div>
+              <div className="mt-2 font-display text-2xl">Design Advisory</div>
+              <p className="mt-3 text-sm text-foreground/70">Material palettes, finishes, and spatial guidance.</p>
+            </div>
+            <div className="rounded-lg border border-border p-6 bg-card/50">
+              <div className="uppercase text-[11px] tracking-[0.2em] text-foreground/60">Bespoke</div>
+              <div className="mt-2 font-display text-2xl">Furniture & Millwork</div>
+              <p className="mt-3 text-sm text-foreground/70">Custom pieces tailored to your lifestyle and space.</p>
+            </div>
+            <div className="rounded-lg border border-border p-6 bg-card/50">
+              <div className="uppercase text-[11px] tracking-[0.2em] text-foreground/60">Styling</div>
+              <div className="mt-2 font-display text-2xl">Art & Decor Curation</div>
+              <p className="mt-3 text-sm text-foreground/70">Finishing layers that bring warmth and personality.</p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Proudly Builds */}
+      <section className="py-16 md:py-24" id="builds">
+        <Container>
+          <div className="text-center">
+            <h3 className="font-display text-3xl md:text-5xl">Proudly Builds</h3>
+            <p className="mt-2 text-foreground/70">Residential, commercial and hospitality spaces.</p>
+          </div>
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            <img className="w-full h-44 object-cover rounded" alt="Residential" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop" />
+            <img className="w-full h-44 object-cover rounded" alt="Commercial" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop" />
+            <img className="w-full h-44 object-cover rounded hidden md:block" alt="Hospitality" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop" />
+          </div>
         </Container>
       </section>
 

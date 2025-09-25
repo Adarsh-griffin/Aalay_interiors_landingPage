@@ -42,10 +42,10 @@ export default function Footer() {
         <div>
           <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">Menu</div>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a className="hover:underline" href="#about">About Us</a></li>
-            <li><a className="hover:underline" href="#portfolio">Portfolio</a></li>
-            <li><a className="hover:underline" href="#services">Services</a></li>
-            <li><a className="hover:underline" href="#journal">Journal</a></li>
+            <li><a className="hover:underline" href="#about-us">About Us</a></li>
+            <li><a className="hover:underline" href="#offerings">Our Offerings</a></li>
+            <li><a className="hover:underline" href="#builds">Proudly Builds</a></li>
+            <li><a className="hover:underline" href="#contact">Contact</a></li>
           </ul>
         </div>
 
