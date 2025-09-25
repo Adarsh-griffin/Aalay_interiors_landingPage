@@ -1,5 +1,17 @@
 import Container from "./Container";
-import { Link } from "react-router-dom";
+
+function openInstagram() {
+  const handle = document.body.getAttribute("data-ig-handle");
+  const url = handle ? `https://instagram.com/${handle}` : "https://instagram.com";
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
+function openWhatsApp() {
+  const phone = document.body.getAttribute("data-wa-phone");
+  const msg = encodeURIComponent("Hello, I'm interested in your interior design services.");
+  const url = phone ? `https://wa.me/${phone}?text=${msg}` : `https://wa.me/?text=${msg}`;
+  window.open(url, "_blank", "noopener,noreferrer");
+}
 
 export default function Footer() {
   return (
@@ -30,20 +42,18 @@ export default function Footer() {
         <div>
           <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">Menu</div>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link className="hover:underline" to="/about">About Us</Link></li>
-            <li><Link className="hover:underline" to="/portfolio">Portfolio</Link></li>
-            <li><Link className="hover:underline" to="/services">Services</Link></li>
-            <li><Link className="hover:underline" to="/journal">Journal</Link></li>
+            <li><a className="hover:underline" href="#about">About Us</a></li>
+            <li><a className="hover:underline" href="#portfolio">Portfolio</a></li>
+            <li><a className="hover:underline" href="#services">Services</a></li>
+            <li><a className="hover:underline" href="#journal">Journal</a></li>
           </ul>
         </div>
 
         <div>
           <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">Follow us</div>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a className="hover:underline" href="#" aria-label="Instagram">Instagram</a></li>
-            <li><a className="hover:underline" href="#" aria-label="Pinterest">Pinterest</a></li>
-            <li><a className="hover:underline" href="#" aria-label="Behance">Behance</a></li>
-            <li><a className="hover:underline" href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><button onClick={openInstagram} className="hover:underline">Instagram</button></li>
+            <li><button onClick={openWhatsApp} className="hover:underline">WhatsApp</button></li>
           </ul>
         </div>
 
@@ -54,12 +64,12 @@ export default function Footer() {
             <li>+91 992 346 6795</li>
             <li>Pune, India</li>
           </ul>
-          <Link
-            to="/contact"
+          <a
+            href="#contact"
             className="inline-flex mt-6 items-center gap-2 border-b border-foreground/30 hover:border-foreground uppercase tracking-[0.14em]"
           >
             Get in touch <span aria-hidden>→</span>
-          </Link>
+          </a>
         </div>
       </Container>
 
@@ -67,9 +77,9 @@ export default function Footer() {
         <Container className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>© {new Date().getFullYear()} Sol Haus Studio</div>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:underline">Privacy policy</a>
-            <a href="#" className="hover:underline">Terms of service</a>
-            <a href="#" className="hover:underline">Cookie policy</a>
+            <span>Privacy policy</span>
+            <span>Terms of service</span>
+            <span>Cookie policy</span>
           </div>
         </Container>
       </div>
