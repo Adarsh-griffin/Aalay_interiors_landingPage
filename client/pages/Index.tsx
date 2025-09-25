@@ -1,10 +1,23 @@
 import Container from "@/components/site/Container";
 
+function openInstagram() {
+  const handle = document.body.getAttribute("data-ig-handle");
+  const url = handle ? `https://instagram.com/${handle}` : "https://instagram.com";
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
+function openWhatsApp() {
+  const phone = document.body.getAttribute("data-wa-phone");
+  const msg = encodeURIComponent("Hello, I'm interested in your interior design services.");
+  const url = phone ? `https://wa.me/${phone}?text=${msg}` : `https://wa.me/?text=${msg}`;
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
 export default function Index() {
   return (
-    <main>
+    <main id="top">
       {/* Hero */}
-      <section className="pt-14 md:pt-20">
+      <section className="pt-14 md:pt-20" id="about">
         <Container className="text-center">
           <h1 className="font-display text-4xl sm:text-5xl md:text-7xl leading-[1.05] tracking-tight">
             BUILDING SPACES,
@@ -14,7 +27,7 @@ export default function Index() {
         </Container>
 
         {/* Gallery Row */}
-        <Container className="mt-12 md:mt-16">
+        <Container className="mt-12 md:mt-16" id="portfolio">
           <div className="grid grid-cols-3 gap-4 md:gap-6">
             <img
               src="https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=1400&auto=format&fit=crop"
@@ -36,7 +49,7 @@ export default function Index() {
       </section>
 
       {/* Vision */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28" id="services">
         <Container className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">Vision</div>
@@ -58,7 +71,7 @@ export default function Index() {
       </section>
 
       {/* Approach banner */}
-      <section className="relative isolate overflow-hidden">
+      <section className="relative isolate overflow-hidden" id="journal">
         <img
           src="https://images.unsplash.com/photo-1598300053658-5befb41a4c6f?q=80&w=1900&auto=format&fit=crop"
           alt="Curved arch interior"
@@ -79,19 +92,27 @@ export default function Index() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28" id="contact">
         <Container className="text-center">
           <h3 className="font-display text-3xl sm:text-4xl md:text-5xl">
             BRING INTENTION
             <span className="mx-3">INTO</span>
             YOUR SPACE
           </h3>
-          <a
-            href="/contact"
-            className="inline-flex mt-8 items-center gap-2 uppercase tracking-[0.14em] border-b border-foreground/40 hover:border-foreground"
-          >
-            Get in touch <span aria-hidden>→</span>
-          </a>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={openInstagram}
+              className="inline-flex items-center gap-2 uppercase tracking-[0.14em] border-b border-foreground/40 hover:border-foreground"
+            >
+              Instagram <span aria-hidden>↗</span>
+            </button>
+            <button
+              onClick={openWhatsApp}
+              className="inline-flex items-center gap-2 uppercase tracking-[0.14em] border-b border-foreground/40 hover:border-foreground"
+            >
+              WhatsApp <span aria-hidden>↗</span>
+            </button>
+          </div>
         </Container>
       </section>
     </main>
