@@ -76,6 +76,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-/* Keyframes for marquee */
-// Using CSS-in-Tailwind layer in global.css, but safely add here as component styles are compiled with Vite */
