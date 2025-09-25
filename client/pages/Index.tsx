@@ -88,6 +88,36 @@ export default function Index() {
         </Container>
       </section>
 
+      {/* Quick sections overview */}
+      <section className="py-12 md:py-16">
+        <Container className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <a href="#about" className="group block border border-border rounded-lg p-6 hover:bg-secondary transition">
+            <div className="uppercase text-[11px] tracking-[0.2em] text-foreground/60">About</div>
+            <div className="mt-2 font-display text-2xl">Design with intention</div>
+            <div className="mt-3 text-sm text-foreground/70">Our ethos of warm minimalism and quiet luxury.</div>
+            <div className="mt-4 inline-block border-b border-foreground/40 group-hover:border-foreground">Explore →</div>
+          </a>
+          <a href="#portfolio" className="group block border border-border rounded-lg p-6 hover:bg-secondary transition">
+            <div className="uppercase text-[11px] tracking-[0.2em] text-foreground/60">Portfolio</div>
+            <div className="mt-2 font-display text-2xl">Selected works</div>
+            <div className="mt-3 text-sm text-foreground/70">Curated spaces that balance light and material.</div>
+            <div className="mt-4 inline-block border-b border-foreground/40 group-hover:border-foreground">Explore →</div>
+          </a>
+          <a href="#services" className="group block border border-border rounded-lg p-6 hover:bg-secondary transition">
+            <div className="uppercase text-[11px] tracking-[0.2em] text-foreground/60">Services</div>
+            <div className="mt-2 font-display text-2xl">From vision to detail</div>
+            <div className="mt-3 text-sm text-foreground/70">Full-service interiors, styling and bespoke furniture.</div>
+            <div className="mt-4 inline-block border-b border-foreground/40 group-hover:border-foreground">Explore →</div>
+          </a>
+          <a href="#journal" className="group block border border-border rounded-lg p-6 hover:bg-secondary transition">
+            <div className="uppercase text-[11px] tracking-[0.2em] text-foreground/60">Journal</div>
+            <div className="mt-2 font-display text-2xl">Notes from the studio</div>
+            <div className="mt-3 text-sm text-foreground/70">Behind the scenes, process and inspiration.</div>
+            <div className="mt-4 inline-block border-b border-foreground/40 group-hover:border-foreground">Explore →</div>
+          </a>
+        </Container>
+      </section>
+
       {/* Vision */}
       <section className="py-20 md:py-28" id="services">
         <Container className="grid md:grid-cols-2 gap-12 items-center">
