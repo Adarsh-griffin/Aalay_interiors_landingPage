@@ -57,6 +57,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Aalay Interiors Color Palette - Inspired by Logo
+        "deep-purple": "hsl(var(--deep-purple))",
+        "rich-purple": "hsl(var(--rich-purple))",
+        "lavender": "hsl(var(--lavender))",
+        "logo-purple": "hsl(var(--logo-purple))",
+        "logo-accent": "hsl(var(--logo-accent))",
+        "warm-gold": "hsl(var(--warm-gold))",
+        "sage-green": "hsl(var(--sage-green))",
+        "terracotta": "hsl(var(--terracotta))",
+        "dusty-blue": "hsl(var(--dusty-blue))",
+        "cream": "hsl(var(--cream))",
+        "charcoal": "hsl(var(--charcoal))",
+        "blush": "hsl(var(--blush))",
+        "forest": "hsl(var(--forest))",
+        "amber": "hsl(var(--amber))",
+        "slate": "hsl(var(--slate))",
       },
       fontFamily: {
         sans: [
@@ -72,6 +88,7 @@ export default {
           "sans-serif",
         ],
         display: ["Bodoni Moda", "Didot", "serif"],
+        diastema: ["Diastema", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

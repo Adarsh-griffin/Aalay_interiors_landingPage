@@ -21,20 +21,25 @@ function openWhatsApp() {
 
 export default function FloatingSocials() {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
       <button
         onClick={openInstagram}
         aria-label="Instagram"
-        className="size-12 rounded-full bg-background/80 backdrop-blur border border-foreground/20 shadow hover:border-foreground/50 flex items-center justify-center"
+        className="size-14 rounded-full shadow-xl flex items-center justify-center"
+        style={{
+          background:
+            "linear-gradient(45deg, #f58529, #feda77, #dd2a7b, #8134af, #515bd4)",
+        }}
       >
-        <Instagram className="size-5" />
+        <Instagram className="size-6 text-white" />
       </button>
       <button
         onClick={openWhatsApp}
         aria-label="WhatsApp"
-        className="size-12 rounded-full bg-background/80 backdrop-blur border border-foreground/20 shadow hover:border-foreground/50 flex items-center justify-center"
+        className="size-14 rounded-full shadow-xl flex items-center justify-center"
+        style={{ background: "#25D366" }}
       >
-        <MessageCircle className="size-5" />
+        <MessageCircle className="size-6 text-white" />
       </button>
     </div>
   );

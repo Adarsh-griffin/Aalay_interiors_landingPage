@@ -21,102 +21,53 @@ function openWhatsApp() {
 
 export default function Footer() {
   return (
-    <footer className="pt-24">
-      <div className="overflow-hidden border-y border-border bg-secondary">
-        <div className="whitespace-nowrap will-change-transform animate-[marquee_25s_linear_infinite] text-4xl md:text-6xl font-display py-6 text-foreground/70">
-          <span className="mx-6">Get in touch</span>
-          <span className="mx-6">•</span>
-          <span className="mx-6">Get in touch</span>
-          <span className="mx-6">•</span>
-          <span className="mx-6">Get in touch</span>
-          <span className="mx-6">•</span>
-          <span className="mx-6">Get in touch</span>
-          <span className="mx-6">•</span>
-          <span className="mx-6">Get in touch</span>
-          <span className="mx-6">•</span>
-        </div>
-      </div>
-
-      <Container className="grid grid-cols-1 md:grid-cols-4 gap-12 py-16">
-        <div>
-          <div className="font-display text-2xl">Sol Haus Studio</div>
-          <p className="mt-4 text-sm text-foreground/70">
-            Interiors with quiet luxury and timeless intention.
-          </p>
-        </div>
-
-        <div>
-          <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">
-            Menu
+    <footer className="pt-12">
+      <Container className="py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          {/* Left: Requested content */}
+          <div>
+            <h3 className="font-display text-2xl md:text-3xl">Engage with Us in Conversation.</h3>
+            <p className="mt-4 text-sm text-foreground/80 max-w-xl">
+              In a global world based on communication, a brand must look beyond its borders.
+            </p>
+            <ul className="mt-6 space-y-3 text-sm">
+              <li className="flex items-center gap-3">
+                <span aria-hidden>✉️</span>
+                <a href="mailto:studio.aalay28@gmail.com" className="hover:underline">studio.aalay28@gmail.com</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <span aria-hidden>📷</span>
+                <button onClick={openInstagram} className="hover:underline">@aalay.interiors</button>
+              </li>
+              <li className="flex items-center gap-3">
+                <span aria-hidden>📞</span>
+                <a href="tel:+919579710826" className="hover:underline">+91 9579710826</a>
+              </li>
+            </ul>
+            {/* <p className="mt-6 text-xs text-foreground/60">We respond within 24 hours on business days.</p> */}
           </div>
-          <ul className="mt-4 space-y-2 text-sm">
-            <li>
-              <a className="hover:underline" href="#about-us">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="#offerings">
-                Our Offerings
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="#builds">
-                Proudly Builds
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="#contact">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
 
-        <div>
-          <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">
-            Follow us
+          {/* Right: Visiting card */}
+          <div className="flex md:justify-end">
+            <div className="w-full max-w-sm rounded-xl overflow-hidden shadow-2xl border border-border bg-gradient-to-br from-black/80 to-black/60 text-white">
+              <div className="p-6">
+                <div className="font-display text-xl tracking-wide">Aalay Interiors</div>
+                <div className="mt-1 text-[11px] uppercase tracking-[0.2em] text-white/70">Design • Define • Elevate</div>
+                <div className="mt-6 text-sm text-white/80">studio.aalay28@gmail.com</div>
+                <div className="text-sm text-white/80">@aalay.interiors</div>
+                <div className="text-sm text-white/80">+91 9579710826</div>
+              </div>
+            </div>
           </div>
-          <ul className="mt-4 space-y-2 text-sm">
-            <li>
-              <button onClick={openInstagram} className="hover:underline">
-                Instagram
-              </button>
-            </li>
-            <li>
-              <button onClick={openWhatsApp} className="hover:underline">
-                WhatsApp
-              </button>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <div className="uppercase text-xs tracking-[0.2em] text-foreground/60">
-            Contact
-          </div>
-          <ul className="mt-4 space-y-2 text-sm">
-            <li>hello@solhaus.studio</li>
-            <li>+91 992 346 6795</li>
-            <li>Pune, India</li>
-          </ul>
-          <a
-            href="#contact"
-            className="inline-flex mt-6 items-center gap-2 border-b border-foreground/30 hover:border-foreground uppercase tracking-[0.14em]"
-          >
-            Get in touch <span aria-hidden>→</span>
-          </a>
         </div>
       </Container>
 
-      <div className="border-t border-border text-xs text-foreground/60 py-6">
-        <Container className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>© {new Date().getFullYear()} Sol Haus Studio</div>
-          <div className="flex items-center gap-4">
-            <span>Privacy policy</span>
-            <span>Terms of service</span>
-            <span>Cookie policy</span>
-          </div>
+      {/* separator line between footer content and copyright */}
+      <div className="border-t border-foreground/30" />
+
+      <div className="border-t border-border text-xs text-foreground/60 py-4">
+        <Container className="flex items-center justify-center">
+          <div>© 2025 Aalay Interiors. Designed by LeadGate.</div>
         </Container>
       </div>
     </footer>
